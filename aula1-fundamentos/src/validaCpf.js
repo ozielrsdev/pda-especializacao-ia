@@ -6,8 +6,12 @@
 export function validaCpf(cpf) {
   if (typeof cpf !== 'string') return false;
 
-  const digitos = cpf.replace(/\D/g, '');
-  if (digitos.length !== 11) return false;
+  const formatoValido = /^\d{11}$/.test(cpf) || /^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf);
+  if (!formatoValido) return false;
+
+  const digitos = cpf.replace(/[.-]/g, '');
+
+  if (/^(\d)\1{10}$/.test(digitos)) return false;
 
   const nums = digitos.split('').map((d) => parseInt(d));
 
@@ -23,5 +27,5 @@ export function validaCpf(cpf) {
   const dv1 = calcDigito(nums.slice(0, 9));
   const dv2 = calcDigito(nums.slice(0, 10));
 
-  return dv1 == nums[9] && dv2 == nums[10];
+  return dv1 === nums[9] && dv2 === nums[10];
 }
