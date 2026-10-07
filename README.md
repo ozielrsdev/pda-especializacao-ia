@@ -54,3 +54,4 @@ Prazo: antes da aula 1 da semana seguinte.
 
 > **Você é responsável por cada linha que commita.**
 > O agente executa. Você especifica, lê o diff, roda os testes e decide.
+# Desafio-Frontend-Marketplace-de-NFTs-Squad-05
