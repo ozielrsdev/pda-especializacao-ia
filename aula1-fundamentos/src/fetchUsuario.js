@@ -3,13 +3,25 @@
 // Busca um usuário por id numa API e devolve { id, nome, email }.
 // A função recebe um `fetchFn` pra facilitar teste (injeção de dependência).
 
+const textoOuVazio = (valor) => (typeof valor === 'string' ? valor : '');
+
 export async function fetchUsuario(id, fetchFn = fetch) {
+  if (!Number.isInteger(id) || id <= 0) {
+    const recebido = typeof id === 'string' ? `"${id}" (texto, não número)` : String(id);
+    throw new Error(`id inválido: ${recebido}. Use um número inteiro maior que zero.`);
+  }
+
   const resposta = await fetchFn(`https://api.exemplo.com/usuarios/${id}`);
+
+  if (!resposta.ok) {
+    throw new Error(`Falha ao buscar usuário ${id}: a API respondeu ${resposta.status}.`);
+  }
+
   const dados = await resposta.json();
 
   return {
     id: dados.id,
-    nome: dados.nome.trim(),
-    email: dados.email.toLowerCase(),
+    nome: textoOuVazio(dados.nome).trim(),
+    email: textoOuVazio(dados.email).toLowerCase(),
   };
 }
