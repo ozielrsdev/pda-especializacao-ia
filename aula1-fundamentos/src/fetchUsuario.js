@@ -17,7 +17,13 @@ export async function fetchUsuario(id, fetchFn = fetch) {
     throw new Error(`Falha ao buscar usuário ${id}: a API respondeu ${resposta.status}.`);
   }
 
-  const dados = await resposta.json();
+  const dados = await resposta.json().catch(() => {
+    throw new Error(`Falha ao buscar usuário ${id}: a API não respondeu com JSON válido.`);
+  });
+
+  if (typeof dados !== 'object' || dados === null || Array.isArray(dados)) {
+    throw new Error(`Falha ao buscar usuário ${id}: a API respondeu sem os dados do usuário.`);
+  }
 
   return {
     id: dados.id,
