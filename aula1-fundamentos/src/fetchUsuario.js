@@ -28,6 +28,6 @@ export async function fetchUsuario(id, fetchFn = fetch) {
   return {
     id: dados.id,
     nome: textoOuVazio(dados.nome).trim(),
-    email: textoOuVazio(dados.email).toLowerCase(),
+    email: textoOuVazio(dados.email).trim().toLowerCase(),
   };
 }
