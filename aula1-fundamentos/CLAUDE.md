@@ -23,6 +23,10 @@ Projeto Node pequeno com funções utilitárias em `src/` e testes em `tests/`.
 - Os arquivos em `tests/` são a especificação. **Nunca edite testes** pra fazê-los passar.
 - Sempre rode `npm test` antes de dizer que uma tarefa terminou. Reporte o resultado real dos
   testes, não assuma que o código está certo só porque parece certo.
+- Depois que o `npm test` passar, teste à mão (com `node -e`) os casos que os testes não
+  cobrem: campo faltando ou `null`, tipo errado (texto no lugar de número) e resposta
+  inesperada da API (corpo vazio, não-JSON, lista). Mostre o resultado de cada um antes de
+  dizer que terminou.
 - `const` em vez de `let`; nunca `==`/`!=` (sempre `===`/`!==`); mensagens de erro voltadas ao
   usuário em português.
 
