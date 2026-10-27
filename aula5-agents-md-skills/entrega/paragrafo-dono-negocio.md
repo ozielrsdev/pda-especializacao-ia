@@ -1,0 +1,3 @@
+# Parágrafo para o dono do negócio
+
+Quando a gente pede para uma IA comum criar uma regra no sistema, ela faz o que foi pedido e pronto, sem conferir se o resto continua funcionando. Isso aconteceu no RepairHub: a IA criou uma regra que deixava o serviço travado, e o técnico não conseguiria concluir o serviço e perderia tempo. A correção foi ensinar ao sistema, de forma permanente, a conferir sempre o caminho inteiro do técnico, do cadastro até o serviço concluído, antes de dizer que terminou. E as instruções mais detalhadas de como criar uma regra nova só são usadas na hora em que alguém pede uma regra, e não o tempo todo. Assim o sistema fica mais confiável e não gasta esforço à toa.
