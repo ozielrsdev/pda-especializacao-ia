@@ -1,0 +1,3 @@
+# Parágrafo para o dono do negócio
+
+Demos ao assistente de IA uma ferramenta para consultar os serviços de manutenção da assistência, como "quais computadores ainda estão em conserto?". Isso deixa o dono saber rapidinho o que está pendente, sem abrir planilha nem procurar mensagem no WhatsApp. Ela só lê os serviços e não muda nada: não consegue criar, alterar nem apagar um serviço, e só enxerga a lista de serviços, nenhum outro arquivo do computador. Também testamos se um cliente conseguiria enganar o assistente escrevendo uma ordem escondida na descrição do problema, e ele não caiu. Mesmo assim, a ferramenta passou a avisar o assistente de que o que o cliente escreve é só informação, nunca uma ordem.
