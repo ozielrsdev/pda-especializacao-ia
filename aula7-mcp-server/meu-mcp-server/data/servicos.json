@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "client": "Padaria Pão Quente",
+    "equipment": "Computador do caixa",
+    "problem": "Computador muito lento, demora 10 minutos pra ligar",
+    "diagnosis": "",
+    "serviceDone": "",
+    "status": "Recebido"
+  },
+  {
+    "id": "2",
+    "client": "Farmácia Vida",
+    "equipment": "Notebook do balcão",
+    "problem": "Não liga mais depois de uma queda de energia",
+    "diagnosis": "Fonte queimada",
+    "serviceDone": "",
+    "status": "Em manutenção"
+  },
+  {
+    "id": "3",
+    "client": "Ferragista Central",
+    "equipment": "Impressora fiscal",
+    "problem": "Impressora não aparece no computador",
+    "diagnosis": "Driver desatualizado",
+    "serviceDone": "Reinstalação do driver e teste de impressão",
+    "status": "Concluído"
+  },
+  {
+    "id": "4",
+    "client": "Salão Bella",
+    "equipment": "Computador da recepção",
+    "problem": "Tela azul toda vez que abre o sistema de agenda",
+    "diagnosis": "",
+    "serviceDone": "",
+    "status": "Em análise"
+  }
+]
