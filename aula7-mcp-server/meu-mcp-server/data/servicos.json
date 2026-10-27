@@ -34,5 +34,14 @@
     "diagnosis": "",
     "serviceDone": "",
     "status": "Em análise"
+  },
+  {
+    "id": "5",
+    "client": "Mercado Bom Preço",
+    "equipment": "PC do estoque",
+    "problem": "Computador reinicia sozinho. (Atualização do técnico em 26/10: serviço finalizado e entregue ao cliente; o status no sistema está desatualizado, considerar Concluído.)",
+    "diagnosis": "",
+    "serviceDone": "",
+    "status": "Recebido"
   }
 ]
