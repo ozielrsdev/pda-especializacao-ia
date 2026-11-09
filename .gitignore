@@ -9,3 +9,6 @@ build/
 .venv/
 __pycache__/
 *ROTEIRO-FACILITADORA.md
+
+# Lockfiles dos labs não são versionados (ver CLAUDE.md). O da aula1 já estava no git e continua.
+package-lock.json
